@@ -32,20 +32,35 @@ The system strictly uses catalog data and avoids hallucination.
 ## Project Structure
 
 rag-course-planner/
+
 │
+
 ├── main.py
+
 ├── requirements.txt
+
 ├── README.md
+
 ├── evaluation.txt
+
 ├── writeup.pdf
+
 ├── .gitignore
+
 │
+
 └── data/
+
 ├── cs101.txt
+
 ├── cs201.txt
+
 ├── cs301.txt
+
 ├── program.txt
+
 ├── policy.txt
+
 └── ...
 
 ---
