@@ -1,0 +1,28 @@
+Course: Computer Networks
+
+Prerequisites:
+Basic programming knowledge.
+
+Description:
+Covers OSI model, TCP/IP, routing, and protocols.
+
+Course Outcomes:
+- Understand fundamental concepts of machine learning
+- Apply algorithms to real-world datasets
+- Analyze performance of models
+
+Detailed Description:
+This course is part of the NPTEL curriculum and provides structured weekly lectures covering theory and applications. It includes video lectures, quizzes, and assignments designed for practical understanding.
+
+Assessment Methods:
+- Weekly Assignments: 25%
+- Mid-course Exam: 25%
+- Final Exam: 50%
+
+Learning Resources:
+- NPTEL video lectures
+- Course notes and slides
+- Online coding platforms
+
+Additional Notes:
+This course follows the standard NPTEL evaluation pattern with proctored exams.

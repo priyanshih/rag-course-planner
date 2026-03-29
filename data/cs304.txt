@@ -1,0 +1,27 @@
+CS304: Design and Analysis of Algorithms
+
+Prerequisite: CS201
+
+Description:
+Algorithm design, complexity analysis, greedy, and dynamic programming.
+
+Course Outcomes:
+- Understand core concepts in depth
+- Apply theoretical knowledge to practical systems
+- Develop problem-solving skills
+
+Detailed Description:
+This course provides an in-depth exploration of the subject, including theoretical foundations and practical applications. Students will engage in assignments, projects, and case studies to reinforce learning.
+
+Assessment Methods:
+- Assignments: 20%
+- Midterm Exam: 30%
+- Final Exam: 40%
+- Projects/Quizzes: 10%
+
+Learning Resources:
+- Standard textbooks and research papers
+- Online lecture materials and tutorials
+
+Additional Notes:
+Students are expected to actively participate and maintain academic integrity.

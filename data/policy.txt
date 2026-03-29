@@ -1,0 +1,7 @@
+Academic Policies:
+
+- Minimum grade of C required to pass prerequisite courses
+- Maximum 18 credits allowed per semester
+- A course can be repeated only twice
+- Co-requisites must be taken in the same semester
+- Instructor permission may override prerequisites in special cases

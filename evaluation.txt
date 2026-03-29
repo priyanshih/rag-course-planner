@@ -1,0 +1,25 @@
+1. What is prerequisite for CS301?
+2. Can I take CS301 if I completed CS201?
+3. Can I take CS401 if I completed CS201?
+4. What is needed before CS201?
+5. What is prerequisite chain for CS401?
+6. Suggest courses if I've done CS101
+7. Plan next semester for CS201 completed
+8. What courses can I take after CS301?
+9. Suggest next courses after CS101 and CS201
+10. Plan courses for next term
+11. How many credits required for degree?
+12. What electives are required?
+13. Is CS301 mandatory?
+14. What are program requirements?
+15. Do I need internship credits?
+16. Is CS301 offered in Fall?
+17. Who teaches CS301?
+18. Can instructor override prerequisites?
+19. What is grading policy?
+20. Can I skip prerequisites?
+21. Can I take CS201 without CS101?
+22. What is prerequisite for unknown course?
+23. Can I take MA301?
+24. What courses require CS301?
+25. Suggest plan with missing info

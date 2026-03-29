@@ -1,0 +1,20 @@
+Computer Science Degree Requirements:
+
+- Core courses: CS101, CS201, CS301, CS302
+- Advanced electives: any 3 from CS400-level courses
+- Math requirement: MATH101, MATH201
+- Minimum credits: 120
+
+Students must complete prerequisites before enrolling in advanced courses.
+
+Elective Requirements:
+Students must choose electives from advanced CS courses such as CS401–CS450.
+
+Residency Requirement:
+At least 60 credits must be completed within the institution.
+
+Repeat Policy:
+Courses can be repeated up to two times to improve grades.
+
+Grading Policy:
+Minimum grade of C required for prerequisite satisfaction.
