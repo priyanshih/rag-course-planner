@@ -5,10 +5,7 @@ from langchain_text_splitters import CharacterTextSplitter
 from langchain_community.vectorstores import FAISS
 from langchain_community.embeddings import HuggingFaceEmbeddings
 
-# -------------------------------
-# LOAD DATA
-# -------------------------------
-
+# Load Data
 documents = []
 SOURCE_MAP = {}
 
@@ -23,10 +20,7 @@ for file in os.listdir("data"):
         documents.extend(docs)
         SOURCE_MAP[file] = f"https://example.edu/catalog/{file.replace('.txt','')}"
 
-# -------------------------------
-# RAG SETUP
-# -------------------------------
-
+# RAG setup
 splitter = CharacterTextSplitter(chunk_size=400, chunk_overlap=50)
 chunks = splitter.split_documents(documents)
 
@@ -37,10 +31,7 @@ embeddings = HuggingFaceEmbeddings(
 db = FAISS.from_documents(chunks, embeddings)
 retriever = db.as_retriever(search_kwargs={"k": 5})
 
-# -------------------------------
-# BUILD PREREQ MAP
-# -------------------------------
-
+# Build prereq map
 def build_prereq_map(docs):
     prereq_map = {}
 
@@ -67,10 +58,7 @@ def build_prereq_map(docs):
 
 prereq_map = build_prereq_map(documents)
 
-# -------------------------------
-# HELPERS
-# -------------------------------
-
+# Helpers
 def extract_courses(query):
     return list(set([c.upper() for c in re.findall(r"[A-Za-z]{2,}\d{2,}", query)]))
 
@@ -114,10 +102,7 @@ def get_chain(course):
 
     return chain
 
-# -------------------------------
-# QUERY TYPE DETECTION
-# -------------------------------
-
+# Query type detection
 def is_planning_query(q):
     q = q.lower()
     return any(k in q for k in [
@@ -147,10 +132,7 @@ def is_policy_query(q):
 def is_reverse_query(q):
     return "require" in q.lower() and "what" in q.lower()
 
-# -------------------------------
-# CITATIONS
-# -------------------------------
-
+# Citations
 def get_citations(courses):
     citations = []
 
@@ -169,10 +151,7 @@ def get_citations(courses):
 
     return "\n- " + "\n- ".join(citations) if citations else "\n- None"
 
-# -------------------------------
-# PROGRAM QA
-# -------------------------------
-
+# Program QA
 def answer_program_question(query):
     docs = retriever.invoke(query)
 
@@ -198,10 +177,7 @@ Assumptions / Not in catalog:
 """
     return None
 
-# -------------------------------
-# MANDATORY QA
-# -------------------------------
-
+# Mandatory QA
 def answer_mandatory_question(query):
     docs = retriever.invoke(query)
 
@@ -227,10 +203,7 @@ Assumptions / Not in catalog:
 """
     return None
 
-# -------------------------------
-# POLICY QA
-# -------------------------------
-
+# Policy QA
 def answer_policy_question(query):
     docs = retriever.invoke(query)
 
@@ -272,10 +245,7 @@ Assumptions / Not in catalog:
 - Exceptions not specified
 """
 
-# -------------------------------
-# REVERSE QUERY
-# -------------------------------
-
+# Reverse Query
 def answer_reverse_query(query):
     courses = extract_courses(query)
     if not courses:
@@ -322,9 +292,7 @@ Assumptions / Not in catalog:
 - Only direct prerequisites considered
 """
 
-# -------------------------------
-# COURSE PLANNING
-# -------------------------------
+# Course Planning
 
 def generate_plan(completed):
     completed_set = expand_completed(completed)
@@ -346,10 +314,7 @@ def generate_plan(completed):
 
     return suggestions[:3], reasons[:3]
 
-# -------------------------------
-# MAIN LOGIC
-# -------------------------------
-
+# Main Logic
 def answer_question(query):
     _ = retriever.invoke(query)
 
@@ -403,7 +368,7 @@ Assumptions / Not in catalog:
 - Availability not considered
 """
 
-    # PREREQ / ELIGIBILITY
+    # prereq/eligibility
     if courses:
         target = courses[0]
         chain = get_chain(target)
@@ -477,10 +442,7 @@ Assumptions / Not in catalog:
 - Data may be incomplete
 """
 
-# -------------------------------
-# RUN
-# -------------------------------
-
+# run
 if __name__ == "__main__":
     query = input("Ask your question: ")
     print(answer_question(query))
